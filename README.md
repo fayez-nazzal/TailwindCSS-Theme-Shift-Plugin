@@ -9,8 +9,7 @@ Add multiple themes to your TailwindCSS project with autoMap classes support ---
 ## How to use?
 
 1. Map colors to the desired themes in your `tailwind.config.js`.
-2. Add this plugin in tailwind's config `plugins`, you can either pass an array of theme names or your full colors config.
-3. Use your new theme variants ⏩.
+2. Add this plugin to your tailwind's config, with your theme colors object.
 
 Your final config could look something similar to this:
 ```js
@@ -58,7 +57,8 @@ module.exports = {
     extend: {
       colors,
     },
-  },  plugins: [
+  },  
+  plugins: [
     require("tailwindcss-theme-shift")(colors, true)
   ]
 }
