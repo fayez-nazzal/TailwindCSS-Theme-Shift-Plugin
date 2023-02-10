@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-theme-shift",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Add multiple themes to your TailwindCSS project with autoMap class support",
   "main": "lib/theme-shift.js",
   "files": [
