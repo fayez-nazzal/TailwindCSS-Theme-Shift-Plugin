@@ -1,10 +1,10 @@
 # TailwindCSS Theme Shift Plugin
 
-<img src="./logo.png" />
+<img src="https://user-images.githubusercontent.com/49946791/218137658-2a0ace5c-b9e9-4bd1-86aa-adb6f441cba5.png" />
 <br />
 <br />
 
-Add multiple themes to your TailwindCSS project with autoMap classes support, fast and easy 🥞
+Add multiple themes to your TailwindCSS project with autoMap classes support --- Fast and Easy 🥞
 
 ## How to use?
 
