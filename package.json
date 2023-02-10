@@ -1,0 +1,32 @@
+{
+  "name": "tailwindcss-theme-shift",
+  "version": "1.0.0",
+  "description": "Add multiple themes to your TailwindCSS project with variants support",
+  "main": "lib/theme-shift.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "types": "lib/theme-shift.d.ts",
+  "scripts": {
+    "build": "tsc && google-closure-compiler --js=lib/theme-shift.js --js_output_file=lib/theme-shift.min.js && mv lib/theme-shift.min.js lib/theme-shift.js"
+  },
+  "keywords": [
+    "tailwind",
+    "tailwindCSS",
+    "plugin",
+    "theme",
+    "multi",
+    "variants"
+  ],
+  "author": "Fayez Nazzal",
+  "license": "MIT",
+  "repository": "https://github.com/fayez-nazzal/theme-shift",
+  "bugs": "https://github.com/fayez-nazzal/theme-shift/issues",
+  "devDependencies": {
+    "google-closure-compiler": "^20230103.0.0",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3"
+  }
+}
