@@ -2,9 +2,9 @@
 
 <img src="./logo.png" />
 <br />
-
-Add multiple themes to your TailwindCSS project with variants support, fast and easy 🥞
 <br />
+
+Add multiple themes to your TailwindCSS project with autoMap classes support, fast and easy 🥞
 
 ## How to use?
 
@@ -40,32 +40,6 @@ module.exports = {
 }
 ```
 
-OR
-
-```js
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  theme: {
-    extend: {
-      colors: {
-        background: {
-          light: "#f6f6f6",
-          dark: "#282A3A",
-          cosmic: "#50577A",
-        },
-        primary: {
-          light: "#6D67E4",
-          dark: "#46C2CB",
-          cosmic: "#892CDC",
-        }
-      },
-    },
-  },  plugins: [
-    require("tailwindcss-theme-shift")(["light", "dark", "cosmic"])
-  ]
-}
-```
-
 You can use your themes like the following:
 ```html
 <h1 class="bg-background-light dark:bg-background-dark colorblind:bg-background-colorblind">
@@ -73,7 +47,32 @@ You can use your themes like the following:
 </h1>
 ```
 
-That's a long class name for a simple background right? You can use the [tailwindcss-themed-class](https://www.npmjs.com/package/tailwindcss-themed-class) plugin to drastically make your class names shorter :D
+## Auto map class names to the active theme, you will feel like they are dynamic!
+
+That's a long class name right? pass `true` as a second argument to allow yourself to drastically use shorter class names :D
+
+```js
+...
+module.exports = {
+  theme: {
+    extend: {
+      colors,
+    },
+  },  plugins: [
+    require("tailwindcss-theme-shift")(colors, true)
+  ]
+}
+```
+
+Now you can use one class name that auto maps to all of your themes, and the correct class will be applied for the active theme.
+```html
+<h1 class="bg-background">
+  Let's go!
+</h1>
+```
+
+NOTE: To use this plugin, you need to NOT use the `DEFAULT` property in your config colors, as it leads to circular dependency when the `autoMap` argument is given. If you do, an error will be thrown asking you to remove those.
+
 
 ## License
 

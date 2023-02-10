@@ -1,7 +1,7 @@
 {
   "name": "tailwindcss-theme-shift",
   "version": "1.0.0",
-  "description": "Add multiple themes to your TailwindCSS project with variants support",
+  "description": "Add multiple themes to your TailwindCSS project with autoMap class support",
   "main": "lib/theme-shift.js",
   "files": [
     "lib/**/*"
