@@ -20,8 +20,8 @@
   ],
   "author": "Fayez Nazzal",
   "license": "MIT",
-  "repository": "https://github.com/fayez-nazzal/theme-shift",
-  "bugs": "https://github.com/fayez-nazzal/theme-shift/issues",
+  "repository": "https://github.com/fayez-nazzal/TailwindCSS-Theme-Shift-Plugin",
+  "bugs": "https://github.com/fayez-nazzal/TailwindCSS-Theme-Shift-Plugin/issues",
   "devDependencies": {
     "google-closure-compiler": "^20230103.0.0",
     "typescript": "^4.9.4"

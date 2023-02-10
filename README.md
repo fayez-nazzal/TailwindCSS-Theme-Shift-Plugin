@@ -42,7 +42,7 @@ module.exports = {
 
 You can use your themes like the following:
 ```html
-<h1 class="bg-background-light dark:bg-background-dark colorblind:bg-background-colorblind">
+<h1 class="bg-background-light dark:bg-background-dark cosmic:bg-background-cosmic">
   Let's go!
 </h1>
 ```
