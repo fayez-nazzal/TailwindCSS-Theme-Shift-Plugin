@@ -4,7 +4,7 @@
 <br />
 <br />
 
-Add multiple themes to your TailwindCSS project with autoMap classes support --- Fast and Easy 🥞
+Add multiple themes to your TailwindCSS project with autoMap classes support, fast and easy!
 
 ## How to use?
 
@@ -33,7 +33,8 @@ module.exports = {
     extend: {
       colors,
     },
-  },  plugins: [
+  },  
+  plugins: [
     require("tailwindcss-theme-shift")(colors)
   ]
 }
