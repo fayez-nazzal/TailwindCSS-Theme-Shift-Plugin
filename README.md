@@ -9,7 +9,10 @@ Add multiple themes to your TailwindCSS project with autoMap classes support, fa
 ## How to use?
 
 1. Map colors to the desired themes in your `tailwind.config.js`.
-2. Add this plugin to your tailwind's config, with your theme colors object.
+2. Add this plugin to your tailwind's config, pass those arguments in order:
+  1. colors: Your tailwind config's color object.
+  2. defaultTheme: The key of your default theme, e.p: "light".
+  3. autoMap: A boolean that indicates whether you want to auto-map one class name to all of your themes ( bg-primary could map to `bg-primary dark:bg-primary-dark cosmic:bg-primary-cosmic ).
 
 Your final config could look something similar to this:
 ```js
@@ -35,21 +38,19 @@ module.exports = {
     },
   },  
   plugins: [
-    require("tailwindcss-theme-shift")(colors)
+    require("tailwindcss-theme-shift")(colors, "light", true)
   ]
 }
 ```
 
 You can use your themes like the following:
 ```html
-<h1 class="bg-background-light dark:bg-background-dark cosmic:bg-background-cosmic">
+<h1 class="bg-background">
   Let's go!
 </h1>
 ```
 
-## Auto map class names to the active theme, you will feel like they are dynamic!
-
-That's a long class name right? pass `true` as a second argument to allow yourself to drastically use shorter class names :D
+The Auto map features allows you to use drastically shorter class name, so the class name `bg-background` is a shorthand for `bg-background dark:bg-background-dark cosmic:bg-background-cosmic`. Otherwise if you decide to use the usual long names, you can pass `false, as the third argument.
 
 ```js
 ...
@@ -64,16 +65,6 @@ module.exports = {
   ]
 }
 ```
-
-Now you can use one class name that auto maps to all of your themes, and the correct class will be applied for the active theme.
-```html
-<h1 class="bg-background">
-  Let's go!
-</h1>
-```
-
-NOTE: To use this plugin, you need to NOT use the `DEFAULT` property in your config colors, as it leads to circular dependency when the `autoMap` argument is given. If you do, an error will be thrown asking you to remove those.
-
 
 ## License
 

@@ -7,7 +7,7 @@ type IConfigColor = Record<string, Record<string, string>>;
  * @param configColors - An array of theme names or an object of theme names and colors
  * @param autoMap - Automatically map each color to the corresponding theme using a single class name, e.g. `bg-primary` could map to `light:bg-primary-light dark:bg-primary-dark`
  */
-export = (configColors: IConfigColor, autoMap?: boolean) =>
+export = (configColors: IConfigColor, defaultTheme: string, autoMap: boolean) =>
   plugin(({ addVariant, addUtilities, e }) => {
     let themes: string[] = [];
 
@@ -67,7 +67,13 @@ export = (configColors: IConfigColor, autoMap?: boolean) =>
             const className = `${tailwindClass}-${name}${suffix}`;
 
             const applyClasses = valuesKeys
-              .map((value) => `${tailwindClass}-${name}-${value}${suffix.replace('\\', '')}`)
+              .map(
+                (value) =>
+                  `${value === defaultTheme ? '' : `${value}:`}${tailwindClass}-${name}-${value}${suffix.replace(
+                    '\\',
+                    '',
+                  )}`,
+              )
               .join(' ');
 
             addUtilities({
