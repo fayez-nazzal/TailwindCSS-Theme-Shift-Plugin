@@ -10,9 +10,9 @@ Add multiple themes to your TailwindCSS project with autoMap classes support, fa
 
 1. Map colors to the desired themes in your `tailwind.config.js`.
 2. Add this plugin to your tailwind's config, pass those arguments in order:
-  1. colors: Your tailwind config's color object.
-  2. defaultTheme: The key of your default theme, e.p: "light".
-  3. autoMap: A boolean that indicates whether you want to auto-map one class name to all of your themes ( bg-primary could map to `bg-primary dark:bg-primary-dark cosmic:bg-primary-cosmic ).
+    1. colors: Your tailwind config's color object.
+    2. defaultTheme: The key of your default theme, e.p: "light".
+    3. autoMap: A boolean that indicates whether you want to auto-map one class name to all of your themes ( bg-primary could map to `bg-primary dark:bg-primary-dark cosmic:bg-primary-cosmic ).
 
 Your final config could look something similar to this:
 ```js
@@ -50,10 +50,11 @@ You can use your themes like the following:
 </h1>
 ```
 
-The Auto map features allows you to use drastically shorter class name, so the class name `bg-background` is a shorthand for `bg-background dark:bg-background-dark cosmic:bg-background-cosmic`. Otherwise if you decide to use the usual long names, you can pass `false, as the third argument.
+The Auto map features allows you to use drastically shorter class name, so the class name `bg-background` is a shorthand for `bg-background dark:bg-background-dark cosmic:bg-background-cosmic`. Otherwise if you decide to use the usual long names, you can pass `false`, as the third argument.
 
 ```js
 ...
+
 module.exports = {
   theme: {
     extend: {
