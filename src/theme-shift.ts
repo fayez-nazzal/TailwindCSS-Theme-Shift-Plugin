@@ -49,6 +49,7 @@ export = (configColors: IConfigColor, defaultTheme: string, autoMap: boolean) =>
         'via',
         'to',
         'stroke',
+        'fill',
       ];
 
       const suffixes = [...range(10, 100, 10).map((value) => `\\/${value}`), ''];
