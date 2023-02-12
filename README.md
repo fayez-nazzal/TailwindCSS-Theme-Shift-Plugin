@@ -12,7 +12,7 @@ Add multiple themes to your TailwindCSS project with autoMap classes support, fa
 2. Add this plugin to your tailwind's config, pass those arguments in order:
     1. colors: Your tailwind config's color object.
     2. defaultTheme: The key of your default theme, e.p: "light".
-    3. autoMap: A boolean that indicates whether you want to auto-map one class name to all of your themes ( bg-primary could map to `bg-primary dark:bg-primary-dark cosmic:bg-primary-cosmic ).
+    3. autoMap: A boolean that indicates whether you want to auto-map one class name to all of your themes ( `bg-primary` could map to `bg-primary dark:bg-primary-dark cosmic:bg-primary-cosmic` ).
 
 Your final config could look something similar to this:
 ```js
