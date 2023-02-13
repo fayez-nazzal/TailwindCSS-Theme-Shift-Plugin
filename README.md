@@ -50,7 +50,7 @@ You can use your themes like the following:
 </h1>
 ```
 
-The Auto map features allows you to use drastically shorter class name, so the class name `bg-background` is a shorthand for `bg-background dark:bg-background-dark cosmic:bg-background-cosmic`. Otherwise if you decide to use the usual long names, you can pass `false`, as the third argument.
+The Auto map features allows you to use drastically shorter class name, so the class name `bg-background` is a shorthand for `bg-background dark:bg-background-dark cosmic:bg-background-cosmic`. Otherwise if you don't want this future and decide to only use the usual (long) class names, you can pass `false`, as the third argument.
 
 ```js
 ...
@@ -62,7 +62,7 @@ module.exports = {
     },
   },  
   plugins: [
-    require("tailwindcss-theme-shift")(colors, true)
+    require("tailwindcss-theme-shift")(colors, false)
   ]
 }
 ```
