@@ -67,6 +67,22 @@ module.exports = {
 }
 ```
 
+## Changing the theme
+
+To change the active theme, add your theme name as a class to your `document.body`, an example `changeTheme` function could be:
+
+```js
+export const changeTheme = (theme) => {
+  if (typeof document !== 'undefined') {
+    // remove all classes from document.body
+    document.body.classList.remove(...document.body.classList);
+
+    // add the new theme class
+    document.body.classList.add(theme);
+  }
+};
+```
+
 ## License
 
 MIT
