@@ -52,7 +52,7 @@ export = (configColors: IConfigColor, defaultTheme: string, autoMap: boolean) =>
         'fill',
       ];
 
-      const suffixes = [...range(10, 100, 10).map((value) => `\\/${value}`), ''];
+      const suffixes = [...range(0, 100, 5).map((value) => `\\/${value}`), ''];
 
       for (let i = 0; i < colorEntries.length; i++) {
         const [name, values] = colorEntries[i];
